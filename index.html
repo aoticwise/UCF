@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSL/TLS Certificate Authentication</title>
+</head>
+<body>
+  <h1>Welcome to Your Secure Website</h1>
+  <p>You have successfully accessed a secure page.</p>
+  
+  <form id="loginForm">
+    <input type="submit" value="Submit with Certificate" />
+  </form>
+
+  <script>
+    // Attach a JavaScript event listener to the form submit event
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // The browser will prompt the user to select a client certificate, if available
+      // The actual authentication will be handled by the server during the SSL/TLS handshake
+    });
+  </script>
+</body>
+</html>
